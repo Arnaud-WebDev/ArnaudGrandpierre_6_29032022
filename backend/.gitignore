@@ -1,0 +1,17 @@
+node_modules
+
+# JPEG
+*.jpg
+*.jpeg
+
+# Portable Network Graphics
+*.png
+
+# BMP
+*.bmp
+
+# Web P
+*.webp
+
+#dotenv
+.env
