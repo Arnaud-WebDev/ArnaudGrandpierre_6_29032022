@@ -1,5 +1,8 @@
 const express = require("express");
+
+//La fonction Router
 const router = express.Router();
+
 const sauceCtrl = require("../controllers/Sauce");
 
 const auth = require("../middleware/auth");

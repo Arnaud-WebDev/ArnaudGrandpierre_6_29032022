@@ -5,7 +5,7 @@ const http = require("http");
 const app = require("./app");
 
 //Renvoie un port valide, qu'il soit fourni sous la forme d'un numéro ou d'une chaîne
-const port = process.env.PORT || PORT_SECRET;
+const port = process.env.PORT;
 app.set("port", port);
 
 //recherche les différentes erreurs et les gère de manière appropriée
