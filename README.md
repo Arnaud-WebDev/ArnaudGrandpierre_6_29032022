@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
 ## Dotenv
-Add a file `.env` in backend with `PORT=3000` and `MONGODB_URI=mongodb+srv://<user>:<password>@cluster0.pjpa9.mongodb.net/<clusterName>?retryWrites=true&w=majority`. Change `user`, `password` and `clusterName` by your username, password's and cluster's name MongoDB.
+Add a file `.env` in backend with `PORT=3000` and `MONGODB_URI=<your url MongoDB>`. 
 
 ## Development server
 
