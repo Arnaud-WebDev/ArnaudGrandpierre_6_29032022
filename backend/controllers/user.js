@@ -43,13 +43,17 @@ exports.login = (req, res, next) => {
           res.status(200).json({
             userId:
               user._id /* Permet de ne pas modifier les objets des autres utilisateurs grace au filtre ID */,
-            token: jwt.sign({ userId: user._id }, "RANDOM_TOKEN_SECRET", {
-              expiresIn: "24h",
-            }),
+            token: jwt.sign(
+              { userId: user._id },
+              process.env.SECRET_TOKEN_AUTH,
+              {
+                expiresIn: "24h",
+              }
+            ),
           });
         })
         .catch((error) => res.status(500).json({ error }));
     })
-    //Renvoi un erreur server
+    //Renvoi une erreur server
     .catch((error) => res.status(500).json({ error }));
 };

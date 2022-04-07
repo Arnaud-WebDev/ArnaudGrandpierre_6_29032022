@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
-    const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
+    const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN_AUTH);
     const userId = decodedToken.userId;
     //Permet que seul l'utilisateur connecté puisse supprimer son objet et non celui des autres
     req.auth = { userId };

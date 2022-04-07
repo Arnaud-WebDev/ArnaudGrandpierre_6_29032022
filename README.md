@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
+# Dotenv
+
+Un fichier .env.dist est installer sur le projet, retirer le ".dist" du fichier et compléter les champs suivant:
+
+<ul>
+    <li>PORT=3000</li>
+    <li>MONGODB_URI= 'L'url de votre MongoDB'</li>
+    <li>SECRET_TOKEN_AUTH= 'RANDOM_SECRET_TOKEN'</li>
+</ul>
+
+Faites en sorte que toi soit bien attaché après le "=".
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
