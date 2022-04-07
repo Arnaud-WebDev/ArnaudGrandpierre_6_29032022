@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Dotenv
 
-Un fichier .env.dist est installer sur le projet, retirez le ".dist" du fichier et complétez les champs suivant:
+Un fichier `.env.dist` est installer sur le projet, retirez le `.dist` du fichier pour qu'il ne reste que le `.env` et complétez les champs suivant:
 
 <ul>
     <li>PORT=3000</li>
