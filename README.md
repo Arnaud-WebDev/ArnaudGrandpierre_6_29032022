@@ -14,6 +14,10 @@ Un fichier `.env.dist` est installer sur le projet, retirez le `.dist` du fichie
 
 Faites en sorte que tout soit bien attaché après le "=".
 
+# Dossier `images` FR
+
+Si le dossier `images` n'est pas dans le repositorie, pas d'inquiètude, il sera crée automatiquement grâce à `multer` au moment de la création d'une sauce.
+
 # Dotenv EN
 
 A `.env.dist` file is installed on the project, remove the `.dist` from the file so that only the `.env` remains and complete the following fields:
@@ -25,6 +29,10 @@ A `.env.dist` file is installed on the project, remove the `.dist` from the file
 </ul>
 
 Make sure everything is attached after the "=".
+
+# Folder `images` EN
+
+If the `images` folder is not in the repository, don't worry, it will be created automatically thanks to `multer` when creating a sauce.
 
 ## Development server
 
