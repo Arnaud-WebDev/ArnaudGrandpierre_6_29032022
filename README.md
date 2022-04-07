@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
-# Dotenv
+# Dotenv FR
 
 Un fichier `.env.dist` est installer sur le projet, retirez le `.dist` du fichier pour qu'il ne reste que le `.env` et complétez les champs suivant:
 
@@ -13,6 +13,18 @@ Un fichier `.env.dist` est installer sur le projet, retirez le `.dist` du fichie
 </ul>
 
 Faites en sorte que tout soit bien attaché après le "=".
+
+# Dotenv EN
+
+A `.env.dist` file is installed on the project, remove the `.dist` from the file so that only the `.env` remains and complete the following fields:
+
+<ul>
+    <li>PORT=3000</li>
+    <li>MONGODB_URI= 'L'url de votre MongoDB'</li>
+    <li>SECRET_TOKEN_AUTH= 'RANDOM_SECRET_TOKEN'</li>
+</ul>
+
+Make sure everything is attached after the "=".
 
 ## Development server
 
