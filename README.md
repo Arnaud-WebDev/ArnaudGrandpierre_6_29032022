@@ -20,7 +20,7 @@ A `.env.dist` file is installed on the project, remove the `.dist` from the file
 
 <ul>
     <li>PORT=3000</li>
-    <li>MONGODB_URI= 'L'url de votre MongoDB'</li>
+    <li>MONGODB_URI= 'Your MongoDB URL'</li>
     <li>SECRET_TOKEN_AUTH= 'RANDOM_SECRET_TOKEN'</li>
 </ul>
 
