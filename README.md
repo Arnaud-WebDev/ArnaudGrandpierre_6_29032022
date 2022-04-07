@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Dotenv
 
-Un fichier .env.dist est installer sur le projet, retirer le ".dist" du fichier et compléter les champs suivant:
+Un fichier .env.dist est installer sur le projet, retirez le ".dist" du fichier et complétez les champs suivant:
 
 <ul>
     <li>PORT=3000</li>
@@ -12,7 +12,7 @@ Un fichier .env.dist est installer sur le projet, retirer le ".dist" du fichier 
     <li>SECRET_TOKEN_AUTH= 'RANDOM_SECRET_TOKEN'</li>
 </ul>
 
-Faites en sorte que toi soit bien attaché après le "=".
+Faites en sorte que tout soit bien attaché après le "=".
 
 ## Development server
 
