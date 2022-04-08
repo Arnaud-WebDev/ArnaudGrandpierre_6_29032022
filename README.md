@@ -16,7 +16,7 @@ Faites en sorte que tout soit bien attaché après le "=".
 
 ## Dossier `images` FR
 
-Si le dossier `images` n'est pas dans le repositorie, pas d'inquiètude, il sera crée automatiquement grâce à `multer` au moment de la création d'une sauce.
+Si le dossier `images` n'est pas dans le repository, pas d'inquiètude, il sera crée automatiquement grâce à `multer` au moment de la création d'une sauce.
 
 ## Dotenv EN
 
