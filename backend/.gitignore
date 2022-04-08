@@ -1,4 +1,7 @@
+# Ignore le dossier node_modules
 node_modules
+
+# Ignore le dossier images avec toutes ses extensions :
 
 # JPEG
 *.jpg
@@ -15,3 +18,4 @@ node_modules
 
 #dotenv
 .env
+
