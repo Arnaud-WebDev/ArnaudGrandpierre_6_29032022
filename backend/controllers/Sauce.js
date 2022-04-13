@@ -1,9 +1,10 @@
-//Importe le modèle Sauce
+// Importe le modèle Sauce
 const Sauce = require("../models/sauce");
 
-//File System : Permet de Créer, Lire, Ecrire, Copier, Renommer ou Supprimer des fichiers
+// File System : Permet de Créer, Lire, Ecrire, Copier, Renommer ou Supprimer des fichiers
 const fs = require("fs");
 
+// Création des sauces
 exports.createSauce = (req, res, next) => {
   const sauceForm = JSON.parse(req.body.sauce);
   //Supprime l'id pour remplacer par une id créée par mongoDB
@@ -21,6 +22,7 @@ exports.createSauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+// Modification des sauces
 exports.modifySauce = (req, res, next) => {
   const sauceForm = req.file
     ? {
@@ -43,6 +45,7 @@ exports.modifySauce = (req, res, next) => {
   });
 };
 
+// Suppression des sauces
 exports.deleteSauce = (req, res, next) => {
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => {
@@ -56,27 +59,29 @@ exports.deleteSauce = (req, res, next) => {
     .catch((error) => res.status(500).json({ error }));
 };
 
+// Récupération d'une sauce
 exports.getOneSauce = (req, res, next) => {
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => res.status(200).json(sauce))
     .catch((error) => res.status(404).json({ error }));
 };
 
+// Récupération de toutes les sauces
 exports.getAllSauces = (req, res, next) => {
   Sauce.find()
     .then((sauces) => res.status(200).json(sauces))
     .catch((error) => res.status(400).json({ error }));
 };
 
-//Section des likes
+// Section des likes
 exports.likeSauce = (req, res, next) => {
-  // console.log(req.body);
-  //console.log("je suis dans le controller like");
   Sauce.findOne({ _id: req.params.id })
     .then((sauce) => {
+      // req.body.like prend la valeur du like
       switch (req.body.like) {
         //Les gens qui aiment
         case 1:
+          // Verifie si l'userId n'est pas présent le "!" permet d'avoir true sur l'instruction
           if (!sauce.usersLiked.includes(req.body.userId)) {
             Sauce.updateOne(
               { _id: req.params.id },
@@ -105,6 +110,7 @@ exports.likeSauce = (req, res, next) => {
           }
           break;
 
+          // Ramène le like a 0
         case 0:
           if (sauce.usersLiked.includes(req.body.userId)) {
             Sauce.updateOne(
@@ -118,6 +124,7 @@ exports.likeSauce = (req, res, next) => {
               .catch((error) => res.status(400).json({ error }));
           }
 
+          // Ramène le dislike a 0
           if (sauce.usersDisliked.includes(req.body.userId)) {
             Sauce.updateOne(
               { _id: req.params.id },
