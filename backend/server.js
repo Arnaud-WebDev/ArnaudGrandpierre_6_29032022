@@ -8,7 +8,7 @@ const app = require("./app");
 const port = process.env.PORT;
 app.set("port", port);
 
-//recherche les différentes erreurs et les gère de manière appropriée
+//Recherche les différentes erreurs et les gère de manière appropriée
 const errorHandler = (error) => {
   if (error.syscall !== "listen") {
     throw error;

@@ -1,5 +1,5 @@
 const dotenv = require("dotenv").config();
-console.log(dotenv.parsed);
+//console.log(dotenv.parsed);
 
 //Permet d'importer mongoose dans l'app, Mongoose est un package qui facilite les interactions avec notre base de données MongoDB.
 const mongoose = require("mongoose");
@@ -27,6 +27,7 @@ module.exports = mongoose
 //Remplace body.parser, permet d'analyser le corps de la requête
 app.use(express.json());
 
+// Retire la sécurité (CORS) pour que tout le monde puissent accéder a notre API
 // prettier-ignore
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");

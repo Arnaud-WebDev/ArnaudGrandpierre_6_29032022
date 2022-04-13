@@ -3,9 +3,13 @@ const express = require("express");
 //La fonction Router
 const router = express.Router();
 
+// Importe les controllers (création, suppression etc ...)
 const sauceCtrl = require("../controllers/Sauce");
 
+// Importe le middleware d'authentification, pour s'assurer que l'utilisateur est bien connecté pour faire les modifications
 const auth = require("../middleware/auth");
+
+// Importe Multer qui nous permet de gérer les fichiers entrants dans les requêtes HTTP (comme des photos)
 const multer = require("../middleware/multer-config");
 
 //Permet de trouver tous les objets

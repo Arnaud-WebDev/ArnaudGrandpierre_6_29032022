@@ -1,3 +1,4 @@
+//Importe le package mongoose
 const mongoose = require("mongoose");
 
 //Permet de résoudre plus facilement les erreurs générées par MongoDB
@@ -7,7 +8,7 @@ const userSchema = mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true /* Permet de ne pas avoir plusieurs fois la même adresse mail */,
+    unique: true, //Permet de ne pas avoir plusieurs fois la même adresse mail 
   },
   password: { type: String, required: true },
 });
